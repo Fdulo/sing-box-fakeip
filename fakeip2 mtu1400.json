@@ -45,8 +45,8 @@
     "172.19.0.0/30",
     "fdfe:dcba:9876::0/126"
   ],
-      "mtu": "1400",
       "stack": "system",
+      "mtu": 1400,
       "auto_route": true,
       "platform": {
         "http_proxy": {"enabled": true, "server": "0.0.0.0", "server_port": 7890}
