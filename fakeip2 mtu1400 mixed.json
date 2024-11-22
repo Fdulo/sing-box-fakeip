@@ -41,7 +41,6 @@
     {
       "tag": "tun",
       "type": "tun",
-      "udp": true,
       "address": [
     "172.19.0.0/30",
     "fdfe:dcba:9876::0/126"
@@ -87,6 +86,8 @@
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
     "rules": [
+      "network": [
+          "udp"
       {
         "inbound": ["tun","mixed"],
         "action": "sniff"
