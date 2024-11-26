@@ -46,7 +46,7 @@
     "fdfe:dcba:9876::0/126"
   ],
       "stack": "system",
-      "mtu": 1480,
+      "mtu": 1280,
       "auto_route": true,
       "platform": {
         "http_proxy": {"enabled": true, "server": "0.0.0.0", "server_port": 7890}
