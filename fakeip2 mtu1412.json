@@ -48,6 +48,7 @@
       "stack": "system",
       "mtu": 1412,
       "auto_route": true,
+      "endpoint_independent_nat": true,
       "platform": {
         "http_proxy": {"enabled": true, "server": "0.0.0.0", "server_port": 7890}
       }
