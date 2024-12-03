@@ -92,6 +92,10 @@
         "final": "🐟 漏网之鱼",
     "rules": [
       {
+        "inbound": ["tun","mixed"],
+        "action": "sniff"
+      },
+      {
         "action": "sniff"
       },
       {
@@ -101,7 +105,7 @@
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
-      { "ip_is_private": true, "outbound": "🎯 全球直连" },
+      { "ip_is_private": false, "outbound": "🎯 全球直连" },
       { "rule_set": "geosite-openai", "outbound": "🤖 OpenAI" },
       { "rule_set": "geosite-youtube", "outbound": "📹 YouTube" },
       { "rule_set": ["geoip-google", "geosite-google"], "outbound": "🍀 Google" },
