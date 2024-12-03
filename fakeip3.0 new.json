@@ -20,13 +20,13 @@
   "dns": {
     "fakeip": {"enabled": true, "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"},
     "servers": [
-      {"tag": "proxyDns", "address": "tls://8.8.8.8", "address_resolver": "localDns", "address_strategy": "ipv4_only", "detour": "🚀 节点选择"},
-      {"tag": "localDns", "address": "223.5.5.5", "detour": "🎯 全球直连"},
+      {"tag": "proxyDns", "address": "https://dns.google/dns-query", "address_resolver": "localDns", "address_strategy": "ipv4_only", "detour": "🚀 节点选择"},
+      {"tag": "localDns", "address": "https://120.53.53.53/dns-query", "detour": "🎯 全球直连"},
       {"tag": "fakeip", "address": "fakeip"},
       {"tag": "block", "address": "rcode://success"}
     ],
     "rules": [
-      {"outbound": "any", "server": "localDns"},
+      {"outbound": "any", "server": "localDns", "disable_cache": true},
       {"clash_mode": "direct", "server": "localDns"},
       {"clash_mode": "global", "server": "proxyDns"},
       {"query_type": ["A", "AAAA"], "rule_set": "geosite-cn", "server": "fakeip"},
@@ -34,7 +34,7 @@
       {"type": "logical", "mode": "and", "rules": [
         {"rule_set": "geosite-geolocation-!cn", "invert": true},
         {"rule_set": "geoip-cn"}
-      ], "server": "proxyDns", "client_subnet": "114.114.114.114/24"},
+      ], "server": "proxyDns", "client_subnet": "233.5.5.5/24"},
       {"query_type": ["A", "AAAA"], "server": "fakeip"}
     ],
     "independent_cache": true,
@@ -91,10 +91,6 @@
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
     "rules": [
-      {
-        "inbound": ["tun","mixed"],
-        "action": "sniff"
-      },
       {
         "action": "sniff"
       },
