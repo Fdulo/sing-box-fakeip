@@ -92,7 +92,7 @@
         "final": "🐟 漏网之鱼",
     "rules": [
       {
-        "inbound": ["tun","mixed"],
+        "inbound": ["tun", "mixed"],
         "action": "sniff"
       },
       {
