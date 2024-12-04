@@ -50,7 +50,7 @@
     "fdfe:dcba:9876::0/126"
   ],
       "stack": "system",
-      "mtu": 1360,
+      "mtu": 1412,
       "auto_route": true,
       "endpoint_independent_nat": true,
       "platform": {
