@@ -107,6 +107,14 @@
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
       {
+        "domain": [
+          "appcenter.ms",
+          "firebase.io",
+          "crashlytics.com"
+        ],
+        "action": "reject",
+      },
+      {
         "ip_cidr": [
           "224.0.0.0/3",
           "ff00::/8"
