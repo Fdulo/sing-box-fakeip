@@ -112,7 +112,7 @@
           "firebase.io",
           "crashlytics.com"
         ],
-        "action": "reject",
+        "action": "reject"
       },
       {
         "ip_cidr": [
