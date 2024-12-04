@@ -107,7 +107,7 @@
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
       {
-        "domain": [
+        "domain_suffix": [
           "appcenter.ms",
           "firebase.io",
           "crashlytics.com"
