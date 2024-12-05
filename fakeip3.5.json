@@ -52,6 +52,7 @@
       "stack": "system",
       "mtu": 1412,
       "auto_route": true,
+      "tcp_fast_open": true,
       "endpoint_independent_nat": true,
       "platform": {
         "http_proxy": {"enabled": true, "server": "0.0.0.0", "server_port": 7890}
@@ -61,7 +62,8 @@
       "tag": "mixed",
       "type": "mixed",
       "listen": "0.0.0.0",
-      "listen_port": 7890
+      "listen_port": 7890,
+      "tcp_fast_open": true
     }
   ],
 
