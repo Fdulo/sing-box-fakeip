@@ -45,9 +45,6 @@
     {
       "tag": "tun",
       "type": "tun",
-      "listen": "0.0.0.0",
-      "listen_port": 7890,
-      "tcp_fast_open": true,
       "address": [
     "172.19.0.0/30",
     "fdfe:dcba:9876::0/126"
