@@ -8,7 +8,7 @@
       "external_controller": "127.0.0.1:9095",
       "external_ui": "ui",
       "secret": "zxcv...Q",
-      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/haishanh/yacd/archive/gh-pages.zip",
       "external_ui_download_detour": "🎯 全球直连",
       "default_mode": "rule"
       },
@@ -21,7 +21,7 @@
     "fakeip": {"enabled": true, "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"},
     "servers": [
       {"tag": "proxyDns", "address": "https://dns.google/dns-query", "address_resolver": "localDns", "address_strategy": "ipv4_only", "detour": "🚀 节点选择"},
-      {"tag": "localDns", "address": "local", "detour": "🎯 全球直连"},
+      {"tag": "localDns", "address": "223.5.5.5", "detour": "🎯 全球直连"},
       {"tag": "fakeip", "address": "fakeip"},
       {"tag": "block", "address": "rcode://success"}
     ],
