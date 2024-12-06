@@ -21,8 +21,7 @@
     "fakeip": {"enabled": true, "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"},
     "servers": [
       {"tag": "proxyDns", "address": "https://dns.google/dns-query", "address_resolver": "localDns", "address_strategy": "ipv4_only", "detour": "🚀 节点选择"},
-      {"tag": "localDns", "address": "https://120.53.53.53/dns-query", "address_resolver": "lolocalDns", "address_strategy": "ipv4_only", "detour": "🎯 全球直连"},
-      {"tag": "lolocalDns", "address": "local", "detour": "🎯 全球直连"},
+      {"tag": "localDns", "address": "119.29.29.29", "detour": "🎯 全球直连"},
       {"tag": "fakeip", "address": "fakeip"},
       {"tag": "block", "address": "rcode://success"}
     ],
@@ -35,7 +34,7 @@
       {"type": "logical", "mode": "and", "rules": [
         {"rule_set": "geosite-geolocation-!cn", "invert": true},
         {"rule_set": "geoip-cn"}
-      ], "server": "proxyDns", "rewrite_ttl": 10800, "client_subnet": "233.5.5.5/24"},
+      ], "server": "proxyDns", "rewrite_ttl": 10800, "client_subnet": "119.29.29.29/24"},
       {"query_type": ["A", "AAAA"], "server": "fakeip"}
     ],
     "independent_cache": true,
