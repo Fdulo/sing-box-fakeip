@@ -34,7 +34,7 @@
       {"type": "logical", "mode": "and", "rules": [
         {"rule_set": "geosite-geolocation-!cn", "invert": true},
         {"rule_set": "geoip-cn"}
-      ], "server": "proxyDns", "rewrite_ttl": 10800, "client_subnet": "119.29.29.29/24"},
+      ], "server": "proxyDns", "rewrite_ttl": 10800, "client_subnet": "223.5.5.5/24"},
       {"query_type": ["A", "AAAA"], "server": "fakeip"}
     ],
     "independent_cache": true,
