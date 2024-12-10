@@ -98,6 +98,14 @@
         "protocol": "dns",
         "action": "hijack-dns"
       },
+      {
+        "domain_suffix": [
+          "appcenter.ms",
+          "firebase.io",
+          "crashlytics.com"
+        ],
+        "action": "reject"
+      },
       { "ip_is_private": true, "outbound": "全球直连" },
       { "clash_mode": "direct", "outbound": "全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
