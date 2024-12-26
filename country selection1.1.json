@@ -91,12 +91,22 @@
         "auto_detect_interface": true,
         "final": "漏网之鱼",
     "rules": [
-      {
-        "action": "sniff"
-      },
-      {
-        "protocol": "dns",
-        "action": "hijack-dns"
+     {
+          "inbound": ["tun-in", "mixed-in"],
+          "action": "sniff"
+        },
+        {
+          "type": "logical",
+          "mode": "or",
+          "rules":[
+            {
+              "port":53
+            },
+            {
+              "protocol": "dns"
+            }
+          ],
+          "action": "hijack-dns"
       },
       {
         "domain_suffix": [
