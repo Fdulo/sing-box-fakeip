@@ -46,7 +46,6 @@
     {
       "tag": "tun-in",
       "type": "tun",
-      "endpoint_independent_nat": true,
       "address": [
     "172.19.0.0/30",
     "fdfe:dcba:9876::0/126"
@@ -110,6 +109,7 @@
           "action": "hijack-dns"
       },
       {
+        "disable_cache": true,
         "domain_suffix": [
           "appcenter.ms",
           "firebase.io",
