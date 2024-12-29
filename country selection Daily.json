@@ -132,10 +132,18 @@
       { "clash_mode": "direct", "outbound": "全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "全球直连" },
-      { "domain_suffix": [
+      { 
+{ 
+     "domain": [ "www.perplexity.ai"],
+         },
+    { 
+     "domain_suffix": [
          "perplexity.ai",
-         "pplx.ai"
-          ],
+         "eppo.cloud",
+         "pplx.ai",
+         "singular.net"
+       ]
+      },
         "rule_set": "geosite-openai", "outbound": "OpenAI" },
       { "rule_set": "geosite-youtube", "outbound": "YouTube" },
       { "rule_set": ["geoip-google", "geosite-google"], "outbound": "Google" },
