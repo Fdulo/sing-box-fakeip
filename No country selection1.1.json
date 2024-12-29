@@ -46,6 +46,7 @@
     {
       "tag": "tun-in",
       "type": "tun",
+      "strict_route": true,
       "address": [
     "172.19.0.0/30",
     "fdfe:dcba:9876::0/126"
@@ -88,13 +89,24 @@
         "final": "漏网之鱼",
     "rules": [
       {
-        "action": "sniff"
+          "inbound": ["tun-in", "mixed-in"],
+          "action": "sniff"
+        },
+        {
+          "type": "logical",
+          "mode": "or",
+          "rules":[
+            {
+              "port":53
+            },
+            {
+              "protocol": "dns"
+            }
+          ],
+          "action": "hijack-dns"
       },
       {
-        "protocol": "dns",
-        "action": "hijack-dns"
-      },
-      {
+        "disable_cache": true,
         "domain_suffix": [
           "appcenter.ms",
           "firebase.io",
@@ -102,11 +114,29 @@
         ],
         "action": "reject"
       },
+      {
+        "ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
+        "action": "reject",
+        "source_ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ]
+      },
       { "ip_is_private": true, "outbound": "全球直连" },
       { "clash_mode": "direct", "outbound": "全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "全球直连" },
-      { "rule_set": "geosite-openai", "outbound": "OpenAI" },
+      { "domain": [ "www.perplexity.ai"],
+        "domain_suffix": [
+          "perplexity.ai",
+          "eppo.cloud",
+          "pplx.ai",
+          "singular.net"
+       ],
+        "rule_set": "geosite-openai", "outbound": "OpenAI" },
       { "rule_set": "geosite-youtube", "outbound": "YouTube" },
       { "rule_set": ["geoip-google", "geosite-google"], "outbound": "Google" },
       { "rule_set": ["geoip-telegram", "geosite-telegram"], "outbound": "Telegram" },
