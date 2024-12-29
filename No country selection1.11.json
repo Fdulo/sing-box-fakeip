@@ -47,6 +47,7 @@
       "tag": "tun-in",
       "type": "tun",
       "strict_route": true,
+      "endpoint_independent_nat": true,
       "address": [
     "172.19.0.0/30",
     "fdfe:dcba:9876::0/126"
